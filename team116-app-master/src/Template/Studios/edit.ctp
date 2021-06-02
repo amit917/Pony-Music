@@ -1,0 +1,36 @@
+<?php
+/**
+ * @var \App\View\AppView $this
+ * @var \App\Model\Entity\Studio $studio
+ */
+?>
+<nav class="large-3 medium-4 columns" id="actions-sidebar">
+    <ul class="side-nav">
+        <li class="heading"><?= __('Actions') ?></li>
+        <li><?= $this->Form->postLink(
+                __('Delete'),
+                ['action' => 'delete', $studio->id],
+                ['confirm' => __('Are you sure you want to delete # {0}?', $studio->id)]
+            )
+        ?></li>
+        <li><?= $this->Html->link(__('List Studios'), ['action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('List Locations'), ['controller' => 'Locations', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('New Location'), ['controller' => 'Locations', 'action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('List Bookings'), ['controller' => 'Bookings', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('New Booking'), ['controller' => 'Bookings', 'action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('List Studio Usages'), ['controller' => 'StudioUsages', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('New Studio Usage'), ['controller' => 'StudioUsages', 'action' => 'add']) ?></li>
+    </ul>
+</nav>
+<div class="studios form large-9 medium-8 columns content">
+    <?= $this->Form->create($studio) ?>
+    <fieldset>
+        <legend><?= __('Edit Studio') ?></legend>
+        <?php
+            echo $this->Form->control('studio_number');
+            echo $this->Form->control('location_id', ['options' => $locations]);
+        ?>
+    </fieldset>
+    <?= $this->Form->button(__('Submit')) ?>
+    <?= $this->Form->end() ?>
+</div>

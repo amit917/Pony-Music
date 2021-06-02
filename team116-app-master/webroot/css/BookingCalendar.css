@@ -1,0 +1,156 @@
+.content-container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.controls-container {
+    width: 15%;
+    height: 100%;
+}
+
+.calendar-container {
+    display: flex;
+    width: 85%;
+
+
+    align-items: center;
+    justify-content: center;    
+}
+
+.controls-container {
+    padding-right: 3%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.default-option {
+    padding: 2rem 0;
+}
+
+button {
+    display: block;
+    margin-top: 0.5rem;
+}
+
+.time-slot-controls-container {
+    display: none;
+    flex-direction: column;
+}
+
+.calendar-context-menu {
+    position: absolute;
+    height: max-content;
+    width: 12rem;
+    background-color: rgb(240, 240, 240);
+    border-radius: 3px;
+    z-index: 5;
+
+    padding: 1rem;
+    display: none;
+
+    /* display: flex happens when the menu is opened */
+    flex-direction: column;
+}
+
+label {
+    margin: 0;
+}
+
+.context-control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0.25rem;
+    border-radius: 3px;
+
+    margin-top: 0.75rem;
+    color: white;
+    cursor: pointer;
+}
+
+.delete-button {
+    margin-top: 1.25rem;
+    background-color: #c00000;
+}
+
+.delete-button:hover {
+    background-color: #d35959;
+}
+
+.confirm-button {
+    background-color: green;
+}
+
+.confirm-button:hover {
+    background-color: rgb(70, 160, 70);
+}
+
+.cancel-button {
+    background-color: #6b6b6b;
+}
+
+.cancel-button:hover {
+    background-color: #979797;
+}
+
+.input {
+    /*height: 2rem;*/
+    border-radius: 3px;
+    margin-top: 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+
+select {
+    height: 100%;
+    border-radius: 3px;
+}
+
+select[name*="year"] {
+    width: 4rem;
+}
+
+select[name*="month"] {
+    width: 8rem;
+}
+
+select[name*="day"] {
+    width: 4rem;
+    margin-right: calc(100% - 8rem - 5rem - 5rem);
+}
+
+
+select[name*="hour"],
+select[name*="minute"] {
+    width: 4rem;
+    margin-top: 1rem;
+}
+
+.switch-container {
+    display: flex;
+    flex-direction: column;
+
+    position: absolute;
+    top: 3rem;
+}
+
+.event-container-container {
+    width: 100%;
+    height: 25%;
+}
+
+.draggable-event {
+    width: 100%;
+    height: 2rem;
+    background-color: #3788d8;
+
+    margin-top: 1em;
+}

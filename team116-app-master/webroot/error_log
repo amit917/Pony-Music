@@ -1,0 +1,1 @@
+[09-Feb-2020 02:51:56 UTC] PHP Fatal error:  Cannot redeclare App\Controller\BookingsController::freelancerRecordingCalendar() in /home/dreamfa1/ponymusic.com.au/src/Controller/BookingsController.php on line 626
